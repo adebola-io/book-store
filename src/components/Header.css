@@ -1,0 +1,47 @@
+#book-store_header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  width: 94%;
+  padding: 0 3%;
+  font-size: 11pt;
+}
+#book-store_header img {
+  height: 80%;
+}
+#book-store_header ul {
+  display: flex;
+}
+#book-store_header li {
+  list-style: none;
+  margin-right: 20px;
+}
+#book-store_header > h3 {
+  color: var(--themeColor);
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+#book-store_header_search-link {
+  cursor: pointer;
+}
+
+#book-store_header_userprompts {
+  margin-left: auto;
+}
+#book-store_header_sign-in-button,
+#book-store_header_create-acc-button {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 2px solid var(--themeColor);
+}
+#book-store_header_sign-in-button {
+  background-color: var(--themeColor);
+  margin-right: 30px;
+  color: white;
+}
+#book-store_header_create-acc-button {
+  color: var(--themeColor);
+}
