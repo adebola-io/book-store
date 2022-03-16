@@ -1,14 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import reducer from "./redux/reducer.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/book-store.css";
+import Header from "./components/Header";
+import Home from "./views/Home";
 
 const store = createStore(reducer);
 
-ReactDOM.render(
+const App = () => {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
+
+render(
   <Provider store={store}>
     <App />
   </Provider>,
