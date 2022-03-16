@@ -3,10 +3,11 @@
   top: 0;
   display: flex;
   align-items: center;
-  height: 54px;
+  height: 50px;
   width: 94%;
   padding: 0 3%;
   font-size: 11pt;
+  background-color: white;
 }
 #book-store_header img {
   height: 80%;

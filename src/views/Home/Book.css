@@ -1,0 +1,15 @@
+.book-store_book {
+  border-radius: 5px;
+}
+.book-store_book-cover {
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  height: 218px;
+  width: 144px;
+}
+.book-store_book_info {
+  display: flex;
+  flex-direction: column;
+}

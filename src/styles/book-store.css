@@ -6,9 +6,17 @@ body {
   margin: 0;
   font-family: Ebrima, sans-serif;
   --themeColor: #039166;
+  --themeColorOffsetDark: #035a40;
+  --themeColorOffsetDarker: #014430;
+  --themeColorOffsetDarkest: #01251a;
+  --themeColorOffsetLight: #09a879;
   --selectColor: #026e4e;
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.book-store_view {
+  margin-top: 50px;
 }

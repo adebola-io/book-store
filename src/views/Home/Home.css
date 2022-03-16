@@ -1,0 +1,65 @@
+#book-store_home {
+  margin-top: 70px;
+}
+#book-store_home_banner {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  max-height: 500px;
+  width: 94%;
+  margin: 0 3%;
+  margin-top: 15px;
+  background-color: var(--themeColor);
+  color: white;
+  background-image: linear-gradient(
+    135deg,
+    var(--themeColor),
+    var(--themeColorOffsetDarker)
+  );
+  box-shadow: 0 0 10px 0 var(--themeColorOffsetDarker) inset;
+}
+#book-store_home_banner > h1 {
+  font-size: 38pt;
+  margin: 3% 0 0 3%;
+}
+#book-store_home_banner > h4 {
+  margin-left: 3%;
+}
+#book-store_home_banner_shelf-container {
+  height: 70%;
+  width: 100%;
+  margin-top: auto;
+  overflow: hidden;
+}
+#book-store_home_banner_shelf {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 4%;
+}
+#book-store_home_banner_shelf .book-store_book {
+  margin-right: 50px;
+  box-shadow: 0 0 5px 0 var(--themeColorOffsetDarker);
+}
+
+#book-store_home_lists {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: auto auto auto; */
+  column-gap: 2%;
+  height: 300px;
+  margin: 45px 3%;
+  padding: 0;
+}
+.book-store_home_list {
+  height: 100%;
+  background-color: var(--themeColor);
+}
+
+.row-of-books {
+  height: 80vh;
+  width: 94%;
+  margin: 0 3%;
+  max-height: 450px;
+}
