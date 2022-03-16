@@ -9,14 +9,6 @@
   width: 94%;
   margin: 0 3%;
   margin-top: 15px;
-  background-color: var(--themeColor);
-  color: white;
-  background-image: linear-gradient(
-    135deg,
-    var(--themeColor),
-    var(--themeColorOffsetDarker)
-  );
-  box-shadow: 0 0 10px 0 var(--themeColorOffsetDarker) inset;
 }
 #book-store_home_banner > h1 {
   font-size: 38pt;
@@ -35,18 +27,14 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: 4%;
-}
-#book-store_home_banner_shelf .book-store_book {
-  margin-right: 50px;
-  box-shadow: 0 0 5px 0 var(--themeColorOffsetDarker);
+  padding-left: 3%;
 }
 
 #book-store_home_lists {
   display: -moz-grid;
   display: -ms-grid;
   display: grid;
-  /* grid-template-columns: auto auto auto; */
+  grid: auto/auto auto auto;
   column-gap: 2%;
   height: 300px;
   margin: 45px 3%;

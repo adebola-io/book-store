@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Actions from "../redux/actions";
-import * as icon from "../assets/images/icons/icon.png";
 import "./Header.css";
 
 function Header() {
@@ -11,7 +10,6 @@ function Header() {
   function Logo() {
     return (
       <>
-        <img src={icon.default} alt="Book-store" />
         <h3>BookStore</h3>
       </>
     );

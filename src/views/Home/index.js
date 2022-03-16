@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import Lists from "./Lists";
 import Row from "./Row";
-import "./Home.css";
+import "./index.css";
 
 const Home = (props) => {
   return (

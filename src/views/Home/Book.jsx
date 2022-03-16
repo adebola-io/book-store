@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Utils from "../../utils";
+import { Link } from "react-router-dom";
 import "./Book.css";
 
-const Book = (props) => {
+export const BannerBook = (props) => {
   const [bookInfo, setBookInfo] = React.useState({
     name: "",
     author: "",
@@ -18,36 +19,19 @@ const Book = (props) => {
       })
     );
   }, [props.id]);
-
-  /**
-   * @type {CSSStyleDeclaration}
-   */
-  const CoverStyles = {
-    backgroundImage:
-      "url(" +
-      require("../../assets/images/books/lowres/" + bookInfo.cover).default +
-      ")",
-  };
   return (
-    <div className="book-store_book">
-      <div style={CoverStyles} className="book-store_book-cover"></div>
-      {props.includeDetails === true ? (
-        <div className="book-store_book_info">
-          <span className="book-store_book_info_name">{bookInfo.name}</span>
-          <span className="book-store_book_info_author">{bookInfo.author}</span>
-        </div>
-      ) : (
-        ""
-      )}
-    </div>
+    <Link to={"/books/" + props.id}>
+      <img
+        src={Utils.getBookCover(bookInfo.cover, "md")}
+        alt={bookInfo.name}
+        className="book-store_banner-book-cover"
+      ></img>
+    </Link>
   );
 };
-Book.defaultProps = {
-  id: "012d31673b15fc17",
-  includeDetails: true,
+BannerBook.defaultProps = {
+  id: "0",
 };
-Book.propTypes = {
+BannerBook.propTypes = {
   id: PropTypes.string,
-  includeDetails: PropTypes.bool,
 };
-export default Book;

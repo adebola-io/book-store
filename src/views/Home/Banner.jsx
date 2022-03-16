@@ -1,5 +1,5 @@
 import React from "react";
-import Book from "./Book";
+import { BannerBook } from "./Book";
 
 const Banner = () => {
   return (
@@ -8,12 +8,9 @@ const Banner = () => {
       <h4>Read the bestselling books today.</h4>
       <div id="book-store_home_banner_shelf-container">
         <div id="book-store_home_banner_shelf">
-          <Book id="0f742677332363fa" includeDetails={false} />
-          <Book includeDetails={false} />
-          <Book id="0d6b136135c2e59e" includeDetails={false} />
-          <Book id="07857873691e9d35" includeDetails={false} />
-          <Book id="09c1bb775b4909fa" includeDetails={false} />
-          <Book id="09c1bb775b4909fa" includeDetails={false} />
+          <BannerBook id="012d31673b15fc17" />
+          <BannerBook id="09f957683b64be49" />
+          <BannerBook id="0c3c3c6e3d5134e2" />
         </div>
       </div>
     </section>
