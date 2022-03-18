@@ -2,29 +2,27 @@ import React from "react";
 import Utils from "../../utils";
 
 const SeriesPack = (props) => {
-  const bookRefs = [React.useRef(null), React.useRef(null), React.useRef(null)];
-  const [series, setSeries] = React.useState({
-    author: "",
-    books: [],
-  });
+  const firstBook = React.useRef(null),
+    secondBook = React.useRef(null),
+    thirdBook = React.useRef(null);
+  const [author, setAuthor] = React.useState("");
   React.useEffect(() => {
-    Utils.fetchSeries(props.name?.toLowerCase())
-      .then((data) => {
-        data.books.sort((a, b) => a.noInSeries - b.noInSeries);
-        setSeries({
-          author: data.author,
-          books: data.books,
-        });
-        return series;
-      })
-      .then(() => {
-        bookRefs.forEach((ref, index) => {
-          ref.current.style.backgroundImage = `url(${Utils.getBookCover(
-            series.books[index].localCover,
-            "md"
-          )})`;
-        });
-      });
+    Utils.fetchSeries(props.name?.toLowerCase()).then((data) => {
+      data.books.sort((a, b) => a.noInSeries - b.noInSeries);
+      setAuthor(data.author);
+      firstBook.current.style.backgroundImage = `url(${Utils.getBookCover(
+        data.books[0].localCover,
+        "md"
+      )})`;
+      secondBook.current.style.backgroundImage = `url(${Utils.getBookCover(
+        data.books[1].localCover,
+        "md"
+      )})`;
+      thirdBook.current.style.backgroundImage = `url(${Utils.getBookCover(
+        data.books[2].localCover,
+        "md"
+      )})`;
+    });
   }, []);
   return (
     <div className="book-store_home_series_container">
@@ -33,23 +31,23 @@ const SeriesPack = (props) => {
         className="book-store_home_series-pack"
       >
         <div
-          ref={bookRefs[0]}
+          ref={firstBook}
           className="book-store_home_series-pack_book-1"
         ></div>
         <div className="book-store_home_series-pack_other-books">
           <div
-            ref={bookRefs[1]}
+            ref={secondBook}
             className="book-store_home_series-pack_book-2"
           ></div>
           <div
-            ref={bookRefs[2]}
+            ref={thirdBook}
             className="book-store_home_series-pack_book-3"
           ></div>
         </div>
       </div>
       <div className="book-store_home_series-pack_details">
         <span series-name="true">{props.name}</span>
-        <span series-author="true">{series.author}</span>
+        <span series-author="true">{author.author}</span>
       </div>
     </div>
   );
