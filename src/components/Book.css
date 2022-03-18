@@ -1,0 +1,13 @@
+.book-store_banner-book-cover {
+  height: 218px;
+  width: 144px;
+  max-height: 218px;
+  max-width: 144px;
+  margin-right: 35px;
+  font-size: 11pt;
+  color: gray;
+  transition-duration: 500ms;
+}
+.book-store_banner-book-cover:hover {
+  transform: scale(1.15);
+}

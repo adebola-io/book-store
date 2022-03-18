@@ -15,7 +15,17 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+.image-loading {
+  opacity: 0;
+  transform: translateY(10%);
+}
 .book-store_view {
   margin-top: 50px;
+  animation: show_new_view 600ms;
+}
+@keyframes show_new_view {
+  0% {
+    opacity: 0.2;
+    transform: translate(-5%);
+  }
 }
