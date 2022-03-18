@@ -32,3 +32,8 @@ BannerBook.defaultProps = {
 BannerBook.propTypes = {
   id: PropTypes.string,
 };
+
+export const RegularBook = (props) => {
+  const cover = React.useRef(null);
+  return <div></div>;
+};

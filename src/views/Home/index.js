@@ -13,19 +13,13 @@ const Home = (props) => {
         subtitle="Series trending today."
         containerHeight={310}
       >
-        <SeriesPack
-          name="A Song of Ice and Fire"
-          author="George R.R. Martin"
-          theme="green"
-        />
-        <SeriesPack name="Harry Potter" author="J.K. Rowling" theme="blue" />
-        <SeriesPack
-          name="A Song of Ice and Fire"
-          author="George R.R. Martin"
-          theme="purple"
-        />
+        <SeriesPack name="A Song of Ice and Fire" theme="green" />
+        <SeriesPack name="Harry Potter" theme="blue" />
+        <SeriesPack name="The Stormlight Archive" theme="purple" />
+        <SeriesPack name="Diary of a Wimpy Kid" theme="red" />
+        <SeriesPack name="The Books of Babel" theme="orange" />
       </Row>
-      <Row></Row>
+      <Row heading="Trending Fiction"></Row>
     </main>
   );
 };
