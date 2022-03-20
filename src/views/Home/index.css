@@ -73,7 +73,7 @@
   overflow: hidden;
 }
 .book-store_home_series-pack * {
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }

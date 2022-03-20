@@ -9,7 +9,12 @@ export const trending = {
     "0ecde27434dd6e65",
     "07857873691e9d35",
   ],
-  history: ["01db3468321a672a", "01ff02736b65ff64"],
+  history: [
+    "01db3468321a672a",
+    "02b74c6704c40162",
+    "041ae2733da96e2a",
+    "05e0aa7304cc03e7",
+  ],
 };
 
 export const popularSeries = [
