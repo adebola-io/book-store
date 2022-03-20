@@ -23,7 +23,7 @@ const SeriesPack = (props) => {
         "md"
       )})`;
     });
-  }, []);
+  }, [props.name]);
   return (
     <div className="book-store_home_series_container">
       <div
@@ -46,8 +46,8 @@ const SeriesPack = (props) => {
         </div>
       </div>
       <div className="book-store_home_series-pack_details">
-        <span series-name="true">{props.name}</span>
-        <span series-author="true">{author.author}</span>
+        <h4 series-name="true">{props.name}</h4>
+        <span series-author="true">{author}</span>
       </div>
     </div>
   );

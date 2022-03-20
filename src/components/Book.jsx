@@ -35,5 +35,37 @@ BannerBook.propTypes = {
 
 export const RegularBook = (props) => {
   const cover = React.useRef(null);
-  return <div></div>;
+  const author = React.useRef(null);
+  const title = React.useRef(null);
+  function showImage() {
+    cover.current.classList.remove("image-loading");
+  }
+  React.useEffect(() => {
+    Utils.fetchBook(props.id).then((data) => {
+      cover.current.src = Utils.getBookCover(data.localCover, "md");
+      cover.current.setAttribute("alt", data.name);
+      title.current.innerText = data.name;
+      author.current.innerText = data.author.join(" & ");
+    });
+  }, []);
+  return (
+    <Link to={"/books/" + props.id} className="book-store_regular-book">
+      <img
+        ref={cover}
+        onLoad={showImage}
+        alt=""
+        className="book-store_regular-book_cover"
+      />
+      <span className="book-store_regular-book_info">
+        <h4 ref={title} className="book-store_regular-book_title"></h4>
+        <span ref={author} className="book-store_regular-book_author"></span>
+      </span>
+    </Link>
+  );
+};
+RegularBook.defaultProps = {
+  id: "0",
+};
+RegularBook.propTypes = {
+  id: PropTypes.string,
 };

@@ -1,7 +1,9 @@
 import React from "react";
 import Banner from "./Banner";
 import Row from "./Row";
+import { RegularBook } from "../../components/Book";
 import SeriesPack from "./SeriesPack";
+import { trending, popularSeries } from "../../data";
 import "./index.css";
 
 const Home = (props) => {
@@ -13,13 +15,20 @@ const Home = (props) => {
         subtitle="Series trending today."
         containerHeight={310}
       >
-        <SeriesPack name="A Song of Ice and Fire" theme="green" />
-        <SeriesPack name="Harry Potter" theme="blue" />
-        <SeriesPack name="The Stormlight Archive" theme="purple" />
-        <SeriesPack name="Diary of a Wimpy Kid" theme="red" />
-        <SeriesPack name="The Books of Babel" theme="orange" />
+        {popularSeries.map((series, index) => {
+          return <SeriesPack key={index} name={series} />;
+        })}
       </Row>
-      <Row heading="Trending Fiction"></Row>
+      <Row heading="Trending in Fiction" subtitle="">
+        {trending.fiction.map((bookID, index) => {
+          return <RegularBook key={index} id={bookID} />;
+        })}
+      </Row>
+      <Row heading="Trending in History" subtitle="">
+        {trending.history.map((bookID, index) => {
+          return <RegularBook key={index} id={bookID} />;
+        })}
+      </Row>
     </main>
   );
 };
