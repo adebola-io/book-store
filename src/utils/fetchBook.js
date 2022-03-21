@@ -1,13 +1,11 @@
-const BACK_END = "http://localhost:8080";
-// const BACK_END = "https://adblserve.herokuapp.com";
+// const BACK_END = "http://localhost:8080";
+const BACK_END = "https://adblserve.herokuapp.com";
 /**
  * Fetches a book from ADBL using its Book ID.
  * @param {string} id
  */
 async function fetchBook(id) {
-  const res = await fetch(`${BACK_END}/books/id=${id}`, {
-    method: "POST",
-  });
+  const res = await fetch(`${BACK_END}/books/id=${id}`);
   const data = await res.json();
   return data;
 }
@@ -18,9 +16,7 @@ async function fetchBook(id) {
  * @returns {Promise<{author: string, books: Array<string>}>}
  */
 export const fetchSeries = async function (name) {
-  const res = await fetch(`${BACK_END}/books/seriesName=${name}`, {
-    method: "POST",
-  });
+  const res = await fetch(`${BACK_END}/books/seriesName=${name}`);
   const data = await res.json();
   return data;
 };
@@ -31,9 +27,7 @@ export const fetchSeries = async function (name) {
  * @returns {{id: string, name: string, author: Array<string>}} An array of result objects. A result consists of the ID, title and author of the book.
  */
 export const searchNames = async function (query) {
-  const res = await fetch(`${BACK_END}/books/search?query=${query}`, {
-    method: "POST",
-  });
+  const res = await fetch(`${BACK_END}/books/search?query=${query}`);
   const data = await res.json();
   return data;
 };

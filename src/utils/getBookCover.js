@@ -5,7 +5,12 @@
  * @returns image.
  */
 function getBookCover(localCover, type) {
-  return require(`../assets/images/books/${type}/${localCover}`).default;
+  try {
+    return require(`../assets/images/books/${type}/${localCover}`).default;
+  } catch (e) {
+    console.error(e);
+    return undefined;
+  }
 }
 
 export default getBookCover;
