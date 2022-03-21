@@ -1,10 +1,10 @@
-import fetchBook from "./fetchBook";
-import { fetchSeries } from "./fetchBook";
+import fetchBook, { fetchSeries, searchNames } from "./fetchBook";
 import getBookCover from "./getBookCover";
 
 const Utils = {
   fetchBook,
   fetchSeries,
+  searchNames,
   getBookCover,
 };
 
