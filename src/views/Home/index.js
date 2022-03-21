@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./Banner";
+import Banner, { DBBanner } from "./Banner";
 import Row from "./Row";
 import { RegularBook } from "../../components/Book";
 import SeriesPack from "./SeriesPack";
@@ -19,16 +19,22 @@ const Home = (props) => {
           return <SeriesPack key={index} name={series} />;
         })}
       </Row>
-      <Row heading="Trending in Fiction" subtitle="">
+      <Row heading="Trending in Fiction">
         {trending.fiction.map((bookID, index) => {
           return <RegularBook key={index} id={bookID} />;
         })}
       </Row>
-      <Row heading="Trending in History" subtitle="">
+      <Row heading="Young Adult Bestsellers">
+        {trending.youngAdult.map((bookID, index) => {
+          return <RegularBook key={index} id={bookID} />;
+        })}
+      </Row>
+      <Row heading="Trending in History">
         {trending.history.map((bookID, index) => {
           return <RegularBook key={index} id={bookID} />;
         })}
       </Row>
+      <DBBanner />
     </main>
   );
 };

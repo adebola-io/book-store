@@ -20,4 +20,8 @@ const Banner = () => {
   );
 };
 
+export const DBBanner = () => {
+  return <div></div>;
+};
+
 export default Banner;

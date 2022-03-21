@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 const Row = (props) => {
   return (
     <section className="book-store_home_row-of-books">
-      <h1>{props.heading}</h1>
+      <h1 style={{ marginBottom: props.subtitle ? "0" : "18px" }}>
+        {props.heading}
+      </h1>
       {props.subtitle ? <h4>{props.subtitle}</h4> : ""}
       <div
         row-container="true"
@@ -19,7 +21,6 @@ const Row = (props) => {
 };
 Row.defaultProps = {
   heading: "Row Heading",
-  subtitle: "A row",
   children: "Props. children",
   containerHeight: 250,
 };
