@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Utils from "../utils";
+import Star from "./Star";
 import { Link } from "react-router-dom";
 import "./Book.css";
 
@@ -37,6 +38,8 @@ export const RegularBook = (props) => {
   const cover = React.useRef(null);
   const author = React.useRef(null);
   const title = React.useRef(null);
+  const price = React.useRef(null);
+  const rating = React.useRef(null);
   function showImage() {
     cover.current.classList.remove("image-loading");
   }
@@ -46,6 +49,8 @@ export const RegularBook = (props) => {
       cover.current.setAttribute("alt", data.name);
       title.current.innerText = data.name;
       author.current.innerText = data.author.join(" & ");
+      price.current.innerText = data.price.currency.symbol + data.price.ebook;
+      rating.current.innerText = data.rating.toPrecision(2);
     });
   }, []);
   return (
@@ -54,11 +59,24 @@ export const RegularBook = (props) => {
         ref={cover}
         onLoad={showImage}
         alt=""
-        className="book-store_regular-book_cover"
+        className="image-loading book-store_regular-book_cover"
       />
       <span className="book-store_regular-book_info">
-        <h4 ref={title} className="book-store_regular-book_title"></h4>
+        <h4 ref={title} className="book-store_regular-book_title">
+          Book
+        </h4>
         <span ref={author} className="book-store_regular-book_author"></span>
+        <span className="book-store_regular-book_price-and-rating">
+          <div className="book-store_regular-book_rating">
+            <span
+              ref={rating}
+              className="book-store_regular-book_rating-number"
+            ></span>
+            <Star />
+          </div>
+
+          <div ref={price} className="book-store_regular-book_price"></div>
+        </span>
       </span>
     </Link>
   );

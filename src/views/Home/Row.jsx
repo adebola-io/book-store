@@ -22,7 +22,7 @@ const Row = (props) => {
 Row.defaultProps = {
   heading: "Row Heading",
   children: "Props. children",
-  containerHeight: 250,
+  containerHeight: 275,
 };
 Row.propTypes = {
   heading: PropTypes.string,
