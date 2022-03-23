@@ -30,12 +30,19 @@
   margin-top: 6px;
 }
 .book-store_regular-book_title {
+  font-weight: bold;
+  margin: 0 0 2px 0;
+}
+.book-store_regular-book_title,
+.book-store_regular-book_author {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: bold;
-  margin: 0 0 2px 0;
+}
+.book-store_regular-book_author,
+.book-store_regular-book_price-and-rating {
+  font-size: 10pt;
 }
 .book-store_regular-book_price-and-rating {
   display: flex;
@@ -44,9 +51,8 @@
 .book-store_regular-book_rating {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  margin-right: 6px;
 }
 .book-store_regular-book_price {
-  color: orangered;
   margin-right: auto;
 }

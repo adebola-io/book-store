@@ -7,6 +7,7 @@ import reducer from "./redux/reducer.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/book-store.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./views/Home";
 
 const store = createStore(reducer);
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/home" element={<Home />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

@@ -2,7 +2,6 @@ import React from "react";
 import Banner, { DBBanner } from "./Banner";
 import Row from "./Row";
 import { RegularBook } from "../../components/Book";
-import Star from "../../components/Star";
 import SeriesPack from "./SeriesPack";
 import { trending, popularSeries } from "../../data";
 import "./index.css";
@@ -36,7 +35,6 @@ const Home = (props) => {
         })}
       </Row>
       <DBBanner />
-      <Star></Star>
     </main>
   );
 };

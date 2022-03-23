@@ -1,3 +1,5 @@
 .book-store_rating-star {
-  height: 15px;
+  height: 10pt;
+  margin-left: 4px;
+  filter: saturate(0) invert(1);
 }
