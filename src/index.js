@@ -9,6 +9,7 @@ import "./styles/book-store.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
+import SingleBook from "./views/SingleBook";
 
 const store = createStore(reducer);
 
@@ -18,6 +19,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/books/:id" element={<SingleBook />} />
       </Routes>
       <Footer />
     </Router>
