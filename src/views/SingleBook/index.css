@@ -1,0 +1,45 @@
+#book-store_single-book_background {
+  height: 35vh;
+  width: 100%;
+  max-height: 300px;
+  background-color: var(--themeColorDarkest);
+  color: var(--themeColor);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.35) blur(5px);
+  backdrop-filter: blur(2px);
+}
+#book-store_single-book_details {
+  display: flex;
+}
+#book-store_single-book_main-book-cover {
+  height: 400px;
+  min-width: 260px;
+  margin-left: 3%;
+  transform: translateY(-35%);
+  transition-duration: 450ms;
+}
+#book-store_single-book_info {
+  margin-left: 2%;
+}
+#book-store_single-book_info_title {
+  font-size: 35pt;
+  width: 50vw;
+  margin-bottom: 0;
+}
+#book-store_single-book_info_series {
+  font-size: 15pt;
+  margin: 5px 0;
+  color: gray;
+}
+#book-store_single-book_info_author {
+  font-size: 17pt;
+  margin-top: 15px;
+}
+#book-store_single-book_info_blurb {
+  width: 50vw;
+  height: 200px;
+  margin-bottom: 0;
+  overflow: hidden;
+}

@@ -54,7 +54,13 @@ export const RegularBook = (props) => {
     });
   }, []);
   return (
-    <Link to={"/books/" + props.id} className="book-store_regular-book">
+    <Link
+      to={"/books/" + props.id}
+      onClick={() => {
+        document.querySelector("html").scrollTop = 0;
+      }}
+      className="book-store_regular-book"
+    >
       <img
         ref={cover}
         onLoad={showImage}
