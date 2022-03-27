@@ -3,10 +3,11 @@
   src: url(../assets/fonts/EBRIMA.TTF);
 }
 :root {
-  --themeColor: #5f5f5f;
-  --themeColorOffsetDark: #4d4d4d;
-  --themeColorOffsetDarker: #2b2b2b;
-  --themeColorOffsetDarkest: #000000;
+  --themeColor: #331d83;
+  --themeColorOffsetDark: #271663;
+  --themeColorOffsetDarker: #1f1346;
+  --themeColorOffsetDarkest: #150e2e;
+  --themeColorGradience: linear-gradient(45deg, #40305a, #150e2e);
   --selectColor: rgb(51, 51, 51);
 }
 html::-webkit-scrollbar-thumb {

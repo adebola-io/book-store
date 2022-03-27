@@ -1,4 +1,30 @@
 #book-store_footer {
-  height: 190px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--themeColor);
+  color: white;
+}
+#book-store_footer_lists {
+  display: grid;
+  grid: auto / auto auto auto auto;
+  column-gap: 11%;
+  place-content: center;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 54px;
+}
+.book-store_footer_list h4 {
+  margin-bottom: 0;
+}
+.book-store_footer_list ul {
+  margin-top: 0;
+  padding: 0;
+}
+.book-store_footer_list li {
+  list-style: none;
+  margin: 3px 0;
+}
+#book-store_footer_copyright {
+  margin: 0;
 }
